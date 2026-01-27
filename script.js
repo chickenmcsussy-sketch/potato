@@ -206,3 +206,10 @@ secretEmoji.addEventListener("click", () => {
   secretEmoji.textContent = "🦆";
   secretEmoji.style.pointerEvents = "none";
 });
+
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js");
+  });
+}
