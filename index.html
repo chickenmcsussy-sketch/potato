@@ -3,21 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>💘 Valentine?</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Valentine 💖</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="card">
-    <h1>Evelyn 💖</h1>
-    <p>Will you be my Valentine?</p>
+
+  <!-- FALLING HEARTS -->
+  <div id="confetti"></div>
+
+  <!-- MAIN CARD -->
+  <div class="container" id="main">
+    <h1>Forehead lady, will you be my Valentine? 💖</h1>
+
+    <img src="images/cat1.gif" class="main-image">
 
     <div class="buttons">
-      <button id="yes">Yes 💘</button>
-      <button id="no">No 😭</button>
+      <button id="yesBtn">Yes</button>
+      <button id="noBtn">No</button>
+    </div>
+
+    <p id="warningText"></p>
+  </div>
+
+  <!-- CELEBRATION SCREEN -->
+  <div class="celebration" id="celebrationScreen">
+    <h1 id="celebrationText"></h1>
+
+    <img src="images/cat2.gif" id="catYesImg" class="main-image">
+    <img src="images/penguin.jpg" id="penguinImg" class="main-image">
+
+    <div class="button-row">
+      <button id="poemBtn" class="action-btn">Read Something 💕</button>
+      <button id="whyBtn" class="action-btn">Why I Love You 💗</button>
+      <button id="finalBtn" class="action-btn" disabled>
+      Click This Last 💞
+</button>
+
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- POEM SCREEN -->
+  <div class="celebration" id="poemScreen">
+    <h1>For You 💌</h1>
+
+    <p id="poemText">
+      Roses are red,<br>
+      Violets are blue,<br>
+      You have quite a big forehead,<br>
+      And I really love that about you <br>
+      I’m kidnapping you for the 14th Feb,<br>
+      no objections allowed :3
+    </p>
+    
+
+    <div class="notes-board">
+
+      <div class="note">
+        <img src="images/froggy.jpg" alt="froggy">
+        <span>shiny forehead ✨</span>
+      </div>
+
+      <div class="note">
+        <img src="images/sunset.jpg" alt="sunset">
+        <span>one of my favourite days</span>
+      </div>
+
+      <div class="note">
+        <img src="images/photobooth.jpg" alt="photobooth">
+        <span>photoboooooth 📸</span>
+      </div>
+
+      <div class="note">
+        <img src="images/firstdate.jpg" alt="first date">
+        <span>I always remember your anniversary</span>
+      </div>
+
+      <div class="note">
+        <img src="images/photobooth2.jpg" alt="photobooth 2">
+        <span>kissesssss 😘</span>
+      </div>
+
+      <div class="note">
+        <img src="images/USS.jpg" alt="USS">
+        <span>Going USS with ketchupppp ❤️</span>
+      </div>
+
+    </div>
+
+    <p class="small-note">you still owe me my starbucks ☕</p>
+
+    <button id="poemBackBtn" class="action-btn">Back ❤️</button>
+    <div class="fade fade-top"></div>
+    <div class="fade fade-bottom"></div>
+
+  </div>
+
+  <!-- WHY I LIKE YOU SCREEN -->
+  <div class="celebration" id="whyScreen">
+    <h1>Why I Love You 💗</h1>
+
+    <ul class="why-list">
+      <li>Ketchup is adorable</li>
+      <li>The way your forehead shines ✨</li>
+      <li>You make me feel warm and fuzzy</li>
+      <li>ur "MY" autistic :3</li>
+      <li>Ur turning 20 soon </li>
+      <li>U always comfort me </li>
+      <li>U look like a hamster sometimes </li>
+      <li>Games are more fun </li>
+      <li>I wanna eat u </li>
+      <li>Someone is a gremlin </li>
+      <li>U are very adorably competetive </li>
+    </ul>
+
+    <button id="whyBackBtn" class="action-btn">Back ❤️</button>
+    <div class="fade fade-top"></div>
+    <div class="fade fade-bottom"></div>
+
+    </div> <!-- END whyScreen -->
+
+<!-- FINAL SCREEN (OUTSIDE everything else) -->
+<div class="celebration" id="finalScreen">
+  <h1>I Love You 💖</h1>
+
+  <div class="final-card">
+    <p class="final-message">
+      Thank you for being so patient with me :3, i know im a dum dum
+      but but i made this to show u how much i lobve the ketchupppp (and ur big forehead),
+      also im claiming u on either the 14/15th of feb for date. (reminder)
+      I love you, Mmmmmmmmmwah 😘
+    </p>
+
+    <p class="made-on">
+    Made for u on 27th of Jan for u :3 💕
+    </p>
+    <span id="secretEmoji">🧸</span>
+    <div id="hugCoupon">
+    <h2>🎟 Hug Coupon 🎟</h2>
+    <p>
+      Redeemable for:<br>
+      Unlimited hugs <br>
+      kisses <br>
+      Bitting me anytime <br>
+      cook for u 
+    </p>
+    <span class="coupon-expiry">Expiration date: ♾️</span>
+  </div>
+</div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+
 </body>
 </html>
-
