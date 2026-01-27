@@ -451,3 +451,19 @@ body {
     opacity: 1;
   }
 }
+
+.coupon-expiry {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+#finalScreen {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
