@@ -2,23 +2,24 @@ const CACHE_NAME = "valentine-v2";
 const OFFLINE_URL = "./offline.html";
 
 const FILES_TO_CACHE = [
-  "./",
-  "./index.html",
-  "./style.css",
-  "./script.js",
-  "./manifest.json",
-  "./offline.html",
-  "./icon-192.png",
-  "./icon-512.png",
-  "./cat1.gif",
-  "./cat2.gif",
-  "./penguin.jpg",
-  "./photobooth.jpg",
-  "./photobooth2.jpg",
-  "./firstdate.jpg",
-  "./froggy.jpg",
-  "./USS.jpg"
+  "/potato/",
+  "/potato/index.html",
+  "/potato/style.css",
+  "/potato/script.js",
+  "/potato/manifest.json",
+  "/potato/offline.html",
+  "/potato/icon-192.png",
+  "/potato/icon-512.png",
+  "/potato/cat1.gif",
+  "/potato/cat2.gif",
+  "/potato/penguin.jpg",
+  "/potato/photobooth.jpg",
+  "/potato/photobooth2.jpg",
+  "/potato/firstdate.jpg",
+  "/potato/froggy.jpg",
+  "/potato/USS.jpg"
 ];
+
 
 // Install
 self.addEventListener("install", event => {
