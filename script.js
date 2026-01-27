@@ -204,4 +204,5 @@ function heartExplosion() {
 secretEmoji.addEventListener("click", () => {
   hugCoupon.style.display = "block";
   secretEmoji.textContent = "🦆";
+  secretEmoji.style.pointerEvents = "none";
 });
