@@ -1,7 +1,7 @@
-const CACHE_NAME = "valentine-v1";
-const OFFLINE_URL = "offline.html";
+const CACHE_NAME = "valentine-v2";
+const OFFLINE_URL = "./offline.html";
 
-const ASSETS = [
+const FILES_TO_CACHE = [
   "./",
   "./index.html",
   "./style.css",
@@ -12,32 +12,43 @@ const ASSETS = [
   "./icon-512.png",
   "./cat1.gif",
   "./cat2.gif",
-  "./penguin.jpg"
+  "./penguin.jpg",
+  "./photobooth.jpg",
+  "./photobooth2.jpg",
+  "./firstdate.jpg",
+  "./froggy.jpg",
+  "./USS.jpg"
 ];
 
 // Install
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS))
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.addAll(FILES_TO_CACHE);
+    })
   );
   self.skipWaiting();
 });
 
-self.addEventListener("fetch", event => {
-  // If this is a page navigation
-  if (event.request.mode === "navigate") {
-    event.respondWith(
-      fetch(event.request).catch(() => caches.match("offline.html"))
-    );
-    return;
-  }
-
-  // For everything else (images, css, js)
-  event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
+// Activate
+self.addEventListener("activate", event => {
+  event.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(
+        keys.filter(key => key !== CACHE_NAME)
+            .map(key => caches.delete(key))
+      )
+    )
   );
+  self.clients.claim();
 });
 
+// Fetch
+self.addEventListener("fetch", event => {
+  event.respondWith(
+    fetch(event.request).catch(() =>
+      caches.match(event.request).then(res => res || caches.match(OFFLINE_URL))
+    )
+  );
+});
 
