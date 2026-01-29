@@ -2,6 +2,7 @@
   "name": "Valentine 💖",
   "short_name": "Valentine",
   "start_url": "/potato/",
+  "scope": "/potato/",
   "display": "standalone",
   "background_color": "#ffe6f0",
   "theme_color": "#ff5fa2",
