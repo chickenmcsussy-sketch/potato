@@ -1,8 +1,8 @@
 {
+    "id": "/potato-valentine-v2",
   "name": "Valentine 26 💖",
-  "short_name": "Valentine",
-  "start_url": "/potato/",
-  "scope": "/potato/",
+  "short_name": "Valentine 💖",
+  "start_url": "/potato/?v=2",
   "display": "standalone",
   "background_color": "#ffe6f0",
   "theme_color": "#ff5fa2",
